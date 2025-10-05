@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #25252b;
+    color: #fff;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.slider-wraper {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.login-txt {
+    color: rgb(90, 245, 90);
+    font-size: 38px;
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    overflow-y: auto;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem rgb(90, 245, 90);
+    border-radius: 0.5rem;
+}
+
+.slider #login, #cadastro, #recupera-senha {
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50%;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.txt-login 
+
+
+.slider #login {
+    left: 0;
+    padding: 0 40px;
+}
+
+.slider h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.slider .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    color: rgb(90, 245, 90);
+    border-bottom: 2px solid rgb(90, 245, 90);
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 18px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+    color: rgb(90, 245, 90);
+}
+
+.slider input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid rgb(90, 245, 90);
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b,rgb(90, 245, 90), #25252b, rgb(90, 245, 90)) ;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    top: 0;
+}
+
+.regi-link {
+    
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: ;
+}
+
+.regi-link a {
+    text-decoration: none;
+    color: rgb(90, 245, 90);
+    font-weight: 600;
+}
+
+.regi-link a:hover {
+    text-decoration: underline;
+}
+
+/*.slider-nav a {
+    display: flex;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: #000;
+    text-decoration: none;
+    color: greenyellow;
+    opacity: 0.80;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}

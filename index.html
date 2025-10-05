@@ -4,11 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vital Recife</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="icon" type="image/png" href="/img/favicon.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    
+
+    <section class="container">
+        <div class="slider-wraper">
+            <div class="slider">
+                <div id="login">
+                    <div class="login-info">
+                        <h2><span class="login-txt">Login</span> </h2>
+                        <form action="#">
+                            <div class="input-box">
+                                <input type="text" required>
+                                <label for="">Usuário</label>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <input type="password" required>
+                                <label for="">Senha</label>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <button class="btn" type="submit">Entrar</button>
+                            </div>
+                            
+                            <div class="regi-link">
+                                <p>Esqueceu sua senha? <a href="#recupera-senha" class="esqueceu-senha">Clique aqui</a></p>
+                                <br>
+                                <p>Quer ser um dos nossos parceiros? <a href="#cadastro">Registrar</a></p>
+                            </div>
+                        
+                        </form>
+                    </div>
+                </div>
+
+                <div id="cadastro">
+                    <div class="login-info">
+                        <h2><span class="login-txt">Cadastre-se</span> </h2>
+                        <form action="#">
+                            <div class="input-box">
+                                <input type="text" required>
+                                <label for="">Usuário</label>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <input type="email" required>
+                                <label for="">Email</label>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <input type="tell" required>
+                                <label for="">Telefone</label>
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <input type="password" required>
+                                <label for="">Senha</label>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <input type="password" required>
+                                <label for="">Repita senha</label>
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <button class="btn" type="submit">Registrar</button>
+                            </div>
+                            
+                            <div class="regi-link">
+                                    <p>Já possui uma conta? <a href="#login" class="signuplink sli">Entrar</a></p>
+                            </div>
+                        
+                        </form>
+                    </div>
+                </div>
+
+                <div id="recupera-senha">
+                    <div class="login-info">
+                        <h2>Recuperar<span class="login-txt"> Senha</span> </h2>
+                        <form action="#">
+                            <div class="input-box">
+                                <input type="email" required>
+                                <label for="">Email</label>
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="input-box">
+                                <button class="btn" type="submit">Enviar</button>
+                            </div>
+                            
+                            <div class="regi-link">
+                                <p>Login <a href="#login"> Clique aqui</a></p>
+                                <br>
+                                <p>Cadastre-se <a href="#cadastro"> Clique aqui</a></p>
+                            </div>
+                        
+                        </form>
+                    </div>
+                </div>
+
+                <!--<div class="slider-nav">
+                <a href="#login">Login</a>
+                <div class="regi-link">
+                            <p>Não tem uma conta? <a href="#cadastro" class="signuplink sli">Registrar</a></p>
+                        </div>
+                </div>-->
+            </div>
+
+            
+        </div>
+    </section>
 </body>
 </html>
