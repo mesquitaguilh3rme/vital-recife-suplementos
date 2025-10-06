@@ -1,0 +1,204 @@
+/* --- ESTILOS GERAIS --- */
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --background-color: #121212;
+    --card-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-muted: #888;
+    --success-color: #4CAF50;
+    --locked-color: #444;
+    --glow-color: #00ffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- TELA DE LOGIN --- */
+.login-container {
+    padding: 2rem;
+}
+
+.login-card {
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.login-card h1 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-card p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.3);
+}
+
+.login-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+/* --- TELA DE RECOMPENSAS --- */
+.rewards-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.rewards-header {
+    margin-bottom: 3rem;
+}
+
+.rewards-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.reward-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--locked-color);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reward-day {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.reward-icon {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.reward-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.reward-status {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Estilos dos estados dos cards */
+.reward-card.locked {
+    opacity: 0.5;
+    filter: grayscale(80%);
+}
+
+.reward-card.collected {
+    border-color: var(--success-color);
+    opacity: 0.7;
+}
+
+.reward-card.collected .reward-status {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.reward-card.today {
+    border-color: var(--glow-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.reward-card.final-prize {
+    background: linear-gradient(145deg, #4a148c, #880e4f);
+}
+
+.btn-claim {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--glow-color);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-claim:hover {
+    background-color: #fff;
+}
