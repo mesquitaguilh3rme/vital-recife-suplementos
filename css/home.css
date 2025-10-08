@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #111;
+    color: #fff;
+}
+
+.header {
+    background-color: #1111115e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-weight: bold;
+}
+ 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;  
+}
+
+.btn-navbar {
+    padding: 30% 50%;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn-navbar:hover {
+    background-color: #D6FF33;
+    transform: translateY(-2px);
+
+}
+
+.nome-logo {
+    font-size: 30px;
+    padding: 10px;
+    color: #D6FF33;
+    text-shadow: 1px 1px 2px rgb(26, 24, 24);
+}
+
+.nav-logo img{
+    height: 40px;
+    width: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 20px;
+}
+ 
+.nav-link {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+   color: #CCFF00;
+}
+ 
+ 
+.nav-toggle {
+    display: none;
+}
+ 
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+ 
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+ 
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+ 
+.nav-toggle-label span::before {
+    top: -9px;
+}
+ 
+.nav-toggle-label span::after {
+    bottom: -9px;
+}
+ 
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        background-color: #333;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+    }
+ 
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+ 
+    .nav-toggle-label {
+        display: flex;
+    }
+ 
+    .nav-toggle:checked ~ .nav-menu {
+        left: 0;
+    }
+ 
+    /* Animação do ícone para "X" */
+    .nav-toggle:checked ~ .nav-toggle-label span {
+        transform: rotate(45deg);
+    }
+ 
+    .nav-toggle:checked ~ .nav-toggle-label span::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+ 
+    .nav-toggle:checked ~ .nav-toggle-label span::after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+}
+ 
+.main{
+    display: flex; /* Define o contêiner como um flexbox */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; 
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url('../img/bannertest.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 500px;
+    width: 100%;
+    opacity: 70%;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto h1{
+    color: #CCFF00;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 120px;
+    text-shadow: 1px 1px 2px rgba(204, 255, 0, 1);
+}
+
+.link-inscreva-se {
+    text-decoration: none;
+}
+
+button{
+    display: flex; /* Transforma o botão em um elemento de bloco */
+    padding: 20px; /* Exemplo de espaçamento */
+    margin-top: 20px;
+    background-color: #CCFF00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button-inscreva-se{
+    background: #CCFF00;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+.button-inscreva-se:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #D6FF33;
+    transform: translateY(-2px);
+}
+
+.home-info {
+    background-image: url('../img/banner\ 2222.pg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    text-shadow: 1px 3px 5px #000;
+    margin: 0;
+}
+
+.txt-info {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+}
+
+.txt-info h2 {
+    font-size: 40px;
+}
+.txt-info p {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+#footer {
+    background-color: #111;
+    color: #939393;
+    padding: 40px;
+}
+ 
+footer img {
+    width: 50%;
+}
+ 
+
+ 
+.flex-column {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ 
+.footer_menu {
+    flex: 1;
+    min-width: 200px;
+}
+ 
+.menu {
+    list-style: none;
+    padding: 10px;
+}
+ 
+.text-uppercase {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+ 
+.menu-item h5 {
+    color: #E1FF66;
+    margin-bottom: 15px;
+}
+ 
+.menu-item-children {
+    color: #939393;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+ 
+.menu-item-children:hover {
+    color: #ccff00;
+}
+ 
+.align-text {
+    text-align: center;
+}
+
+
+/*////////////////////INICIO LOGIN////////////////////*/
+
+.container {
+    background-image: url('../img/banner\ 3.png');
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-size: cover;
+    padding-top: 20px;
+    opacity: 70%;
+}
+
+.container img {
+    height: 100%;
+}
+
+.slider-wraper {
+    background-color: transparent;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
+}
+
+.login-txt {
+    color: #CCFF00;
+    font-size: 38px;
+}
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+}
+
+.slider #login, #cadastro, #recupera-senha {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50%;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider #login {
+    left: 0;
+    padding: 0 40px;
+}
+
+.slider h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.slider .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input-box a {
+    text-decoration: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    color: #CCFF00;
+    border-bottom: 2px solid #CCFF00;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 18px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+    color: #CCFF00;
+}
+
+.slider input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #CCFF00;
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b,#CCFF00, #25252b, #CCFF00) ;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    top: 0;
+}
+
+.regi-link {
+    
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: ;
+}
+
+.regi-link a {
+    text-decoration: none;
+    color: #CCFF00;
+    font-weight: 600;
+}
+
+.regi-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+

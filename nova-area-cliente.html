@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta - Vital Recife Suplementos</title>
+    <link rel="stylesheet" href="css/dados1.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/novo-area-cliente.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -23,8 +25,61 @@
             </ul>
         </nav>
     </header>
-    
+
     <main id="main-body">
+
+        <section class="stats-section">
+        <div class="stats-header">
+            <h2>Seu Desempenho</h2>
+            <p>Estatísticas de conversão e seu link de divulgação</p>
+        </div>
+
+        <div class="affiliate-link-section">
+            <label for="affiliate-link">Seu link exclusivo:</label>
+            <div class="link-input-wrapper">
+                <input type="text" id="affiliate-link" value="https://seusite.com/produto?ref=seu-id-123" readonly>
+                <button class="copy-button" aria-label="Copiar link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span>Copiar</span>
+                </button>
+            </div>
+        </div>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon-wrapper access">
+                    <span class="stat-icon">🔗</span>
+                </div>
+                <div class="stat-info">
+                    <h3 class="stat-number">1,482</h3>
+                    <p class="stat-label">Acessos no Link</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon-wrapper purchase">
+                    <span class="stat-icon">🛒</span>
+                </div>
+                <div class="stat-info">
+                    <h3 class="stat-number">97</h3>
+                    <p class="stat-label">Compras Realizadas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon-wrapper conversion">
+                    <span class="stat-icon">🎯</span>
+                </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number">6.5%</h3>
+                        <p class="stat-label">Taxa de Conversão</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section class="my-account">
             <div class="container">
                 <h1 class="text-center">Área do Cliente</h1>
