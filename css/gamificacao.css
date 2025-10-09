@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* --- TELA DE LOGIN --- */
+body {
+    min-height: 100vh;
+    background: #111;
+    color: #fff;
+}
+
 
 .game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
     width: 100%;
 }
 .login-container {
@@ -10,7 +27,6 @@
 }
 
 .login-card {
-    background-color: var(--card-background);
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);

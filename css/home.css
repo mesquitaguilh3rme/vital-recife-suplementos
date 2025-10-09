@@ -60,6 +60,7 @@ body {
     align-items: center;
     gap: 2rem;
     margin-right: 20px;
+    padding-right: 15px;
 }
  
 .nav-link {
