@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root { /*cria variaveis*/
+    --main-color: #ccff00; 
+    --black: #1d1d1d; 
+    --background-color: #333;
+    --border: 0.5px solid #ccff01; 
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize; /*todo os textos começam com a letra maiuscula*/ 
+    transition: 0.2s linear; /*tempo para efeito dos elementos em geral*/
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto; /*centraliza*/
+    max-width: 1200px;
+}
+
+.header {
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: var(--border);
+    padding-bottom: 0.5rem;
+    font-size: 2.1rem;
+}
+
+.btn {
+    background: var(--main-color);
+    color: #111;
+    border-radius: 5px;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block; /*respeita a margem top*/
+}
+
+.btn:hover {
+    letter-spacing: 0.3px;
+}
+
+.foco {
+    color: var(--main-color);
+}
+
+.home-container {
+    /* background-image: url('../img/banner\ 2.png'); */
+    display: flex;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    margin: 3rem 0;
+    
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: 3rem;
+    padding-left: 5rem;
+}
+
+.container {
+    padding: 5rem;
+    margin: 2rem;
+}
+
+.slider-wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-txt {
+    color: var(--main-color);
+    font-size: 38px;
+}
+
+.login-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.slider {
+    display: flex;
+    overflow-x: auto;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+}
+
+.slider #login, #cadastro, #recupera-senha {
+    display: flex;
+    justify-content: center;
+    flex-direction:;
+    align-items: center;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+
+.slider h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.slider .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 18px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.input-box input:focus ~ i,
+.input-box input:valid ~ i {
+    color: var(--main-color);
+}
+
+.slider input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+}
+
+.login-info h2 {
+    color: #fff;
+}
+
+/* .btn { 
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border-radius: 40px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid rgb(90, 245, 90);
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b,rgb(90, 245, 90), #25252b, rgb(90, 245, 90)) ;
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    top: 0;
+} */
+
+.regi-link {
+    
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.regi-link a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.regi-link a:hover {
+    text-decoration: underline;
+}
+
+.regi-link p {
+    color: #fff;
+}
+
+.slider-nav a {
+    display: flex;
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: #000;
+    text-decoration: none;
+    color: var(--main-color);
+    opacity: 0.80;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 6rem;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.content p {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.4;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 5rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: #fff;
+}
+.sobre .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.sobre .row .content {
+    padding: 2rem;
+}
+
+.sobre h2 {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.row .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.depoimentos .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr)); /*minimo de 30 rem e maximo de 1 fração da tela*/
+    gap: 1.5rem;
+
+}
+
+.depoimentos h2 {
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.box-container .box {
+    text-align: center;
+    border: var(--border);
+    border-radius: 5px;
+    padding: 5rem;
+    cursor: pointer;
+}
+
+.box-container .box img {
+    height: 10rem;
+}
+
+.box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.box-container .box .quantidade {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.box-container .box:hover {
+    background-color: #fff;
+}
+
+.box-container .box:hover>* { /* >* aplica para todos dentros da variavel*/
+    color: var(--black);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--black);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    padding: 0.2rem;
+}
+
+footer a {
+    margin: 0 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: var(--main-color);
+    border-bottom: var(--border);
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
