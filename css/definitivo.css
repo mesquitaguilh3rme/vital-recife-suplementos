@@ -132,7 +132,7 @@ section {
 .slider #login, #cadastro, #recupera-senha {
     display: flex;
     justify-content: center;
-    flex-direction:;
+    flex-direction:column;
     align-items: center;
     flex: 1 0 100%;
     scroll-snap-align: start;
