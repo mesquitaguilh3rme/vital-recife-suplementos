@@ -81,7 +81,7 @@ section {
 }
 
 .home-container {
-    background-image: url('../img/banner\ 3.png'); 
+    background-image: url('../img/bannertest.png'); 
     display: flex;
     height: 100vh;
     background-position: center;
@@ -89,6 +89,7 @@ section {
     margin: 3rem 0;
     
 }
+
 
 .home-container section {
     display: flex;
@@ -294,7 +295,9 @@ section {
     line-height: 1.8;
 }
 
+
 .depoimentos .box-container {
+    background-color: var(--black);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem,1fr)); /*minimo de 30 rem e maximo de 1 fração da tela*/
     gap: 1.5rem;
